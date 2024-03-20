@@ -66,7 +66,7 @@ fun StopWatchApp() {
             verticalArrangement = Arrangement.Center
         ) {
             Text(
-                text = "Time: ${formatTime(hours)}:${formatTime(minutes)}:${formatTime(seconds)}", // formats it to hh:mm:ss
+                text = "Time: $hours:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}",
                 modifier = Modifier
                     .padding(bottom = 32.dp),
                 fontSize = 40.sp
@@ -97,10 +97,6 @@ fun StopWatchApp() {
             }
         }
     }
-}
-
-private fun formatTime(time: Int): String {
-    return if (time < 10) "0$time" else "$time" // formatting the time
 }
 
 @Preview(showBackground = true)
