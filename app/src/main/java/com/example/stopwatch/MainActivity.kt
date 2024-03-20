@@ -67,7 +67,8 @@ fun StopWatchApp() {
         ) {
             Text(
                 text = "Time: ${formatTime(hours)}:${formatTime(minutes)}:${formatTime(seconds)}", // formats it to hh:mm:ss
-                modifier = Modifier.padding(bottom = 32.dp),
+                modifier = Modifier
+                    .padding(bottom = 32.dp),
                 fontSize = 40.sp
             )
             Row(
@@ -76,7 +77,8 @@ fun StopWatchApp() {
             ) {
                 Button(
                     onClick = { timerRunning = !timerRunning },
-                    modifier = Modifier.size(100.dp, 50.dp) // makes button bigger
+                    modifier = Modifier
+                        .size(100.dp, 50.dp) // makes button bigger
                         .padding(end = 8.dp) // adds spacing b/w buttons
 
                 ) {
@@ -85,7 +87,8 @@ fun StopWatchApp() {
                 if (timerRunning.not()) {
                     Button(
                         onClick = { time = 0 },
-                        modifier = Modifier.size(100.dp, 50.dp) // makes button bigger
+                        modifier = Modifier
+                            .size(100.dp, 50.dp) // makes button bigger
                             .padding(start = 8.dp) // adds spacing b/w buttons
                     ) {
                         Text("Reset")
